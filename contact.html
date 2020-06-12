@@ -1,45 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Personal Website</title>
+	<title>My Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="keywords" content="Portfolio of Saru Manandhar">
 	<meta name="description" content="Web Development Enthusiast">
+	
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<header style="margin: 0px">
-	<nav  id="top">
+<div class="box">
+  <div class="header">
+	
+    <div class="navigation">
 	<ul>
-		<li>HOME</li>
-		<li>PROJECTS</li>
-		<li>CONTACT</li>
+		<li><a href="index.html" target="_self">HOME</a></li>
+		<li><a href="#" target="_self">PROJECT</a></li>
+		<li><a href="contact.html" target="_self">CONTACT</a></li>
 	</ul>
-</nav>
-</header>
-<article>
-	<div style="text-align: center;">
-		<p class="contactMe">
-			Contact Me
-		</p>
 	</div>
-	<div class="guestInfo">
-		<form name="guestBook" method="Post" action="#">
-			<input type="text" id="Fname" name="fullName" size="40" placeholder="Your Name">
-			<input type="email" id="email"name="guestEmail" size="40" placeholder="Your Email"><br><br>
-			<textarea rows="5" cols="90" placeholder="Message">	
+  </div>
+  
+<div class="mainbody">
+    <form action="#" method="post" target="_self">
+			
+			  <input  type="text" size="30" maxlength="30" placeholder= "Your Name">
+			  <br>
+			  <br>
+	
+			
+			
+			
+			  <input type="email" size="30" maxlength="30" placeholder= "Your Email">
+			  <br>
+			  <br>
 
-			</textarea>
-		</form>	
-	</div>
-</article><br><br>
-<div class="icon">
-	<a href="https://twitter.com/Inspirondon?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-lang="en" data-show-count="false">Follow @Inspirondon</a>
-		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			
+			
+			
+			
+			  <textarea id="message" cols="50" rows="10" placeholder="Write Something.." ></textarea>
+			  <br>
+			  <br>
+		  
+		
+			<div class="clickbutton">
+			 <input type="submit" value="Submit" >
+	  </div>
+			  <div class="clickbutton">
+			    <input type="reset" value="Reset">
+		      </div>
+			  
+
+			
+  </form>
 </div>
-
-<footer class="foot">
-	Copyright &copy; 2020 Saru Manandhar. All Rights Reserved.
-</footer>
+ 
+    <div class="followMe">
+		<a href="https://twitter.com/Inspirondon?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-lang="en" data-show-count="false">Follow @Inspirondon</a>
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+</div>
+  <div class="footer">Copyright &copy; 2020 Saru Manandhar. All Rights Reserved. </div>
 </body>
 </html>
