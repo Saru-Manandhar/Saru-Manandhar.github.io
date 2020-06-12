@@ -1,60 +1,162 @@
-ul li{
-	display: inline;
-	padding-left: 50px;
-	padding-right: 50px;
-	padding-top: 0px;
-	padding-bottom: 10px;
-}
-#top{
-	position: fixed;
-	background-color: rgba(255, 255, 255, 255);
+.box {
+	padding: 0px;
+	height: 100%;
 	width: 100%;
-	margin: 0px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	display: inline;
+}
+.header {
+	padding: 0px;
 	float: none;
+	height: 100px;
+	width: 100%;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
 }
-#profilePic{
-	z-index: -1;
-	margin-top: 100px;
+.mainbody {
+	height: 100%;
+	width: 100%;
+}
+.pic {
+	float: none;
 	margin-left: 100px;
-	float: left;
+	width: 30%;
+	margin-right: 10px;
+	clear: right;
 }
-.bio{
-	margin-left: 480px;
+.bio {
+	margin: 10px;
+	padding: 5px;
+	height: 100%;
+	width: 40%;
+	float: right;
+	clear: none;
+	position: relative;
 }
-.heading{
+.navigation {
+	height: 100px;
+	width: 600px;
+	float: right;
+	background-color: #FFFFFF;
+	margin-top: 25px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  //border: 1px solid #e7e7e7;
+  //background-color: #f3f3f3;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  //color: #4CAF50;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #4CAF50;
+}
+.heading {
+	margin: 0px;
+	clear: left;
+	height: 30px;
 	font-family: Canela, serif;
-	font-size: 55px;
+	font-size: 36px;
+	padding-top: 20px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	padding-left: 0px;
 }
-div p{
-	line-height: 1.5;
-	font-size: 20px;
-}
-.foot{
+.footer {
+	margin: 2px;
+	padding: 5px;
+	height: 20px;
+	width: 100%;
 	text-align: center;
-	padding: 20px;
+}
+input[type=submit] {
+  background-color: #003300;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  margin: 25px;
+}
+input[type=reset]{
+  background-color: #003300;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  margin: 25px;
+}
+
+input[type=submit]:hover {
+  background-color: #009999;
+}
+input[type=reset]:hover {
+  background-color: #009999;
+}
+.clickbutton {
 	margin: 10px;
 }
-.contactMe{
-	font-size: 55px;
-	font-family: Canela, serif;
+input[type=button] {
+  background-color: #003300;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  margin: 25px;
 }
-.guestInfor{
-	padding: 50px;
-	box-sizing: border-box;
-}
+.row{
+  width:100%;
 }
 input[type=text]{
-	width: 50%;
-	padding: 10px;
-	margin: 10px;
-	display: inline-block;
-	border-bottom: 1px solid #ccc;
-	box-sizing: border-box;
+ padding: 12px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ resize: vertical;
+ font-family:Canela serif;
 }
-input[type=submit]{
+input[type=email]{
+ padding: 12px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ resize: vertical;
+ font-family:Canela serif;
+}
+#message{
+ padding: 12px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ resize: vertical;
+ font-family:Canela serif;
+}
+.followMe {
+	height: auto;
 	width: 100%;
-	background-color: purple;
-	color: white;
-	padding: 10px 20px;
-	margin: 10px o; 
 }
