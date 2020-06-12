@@ -22,10 +22,8 @@
   </div>
   
   <div class="mainbody">
-    <div>
-
-	  </div>
-
+	  <h4 id="repoInfo"></h4>
+	  <h4>Follow me on <a id="githublink">Github</a></h4>
 	
   
   
@@ -37,6 +35,10 @@
   	.then(response => response.json())
   		.then(function(data){
   			console.log(data)
+		let repositoryInfo = data['public_repos']
+		let repoInfos = 'I have only ${repositoryInfo} in Github.'
+		document.getElementById("repoInfo").textContent = repoInfos
+		document.getElementById("githublink").href = data['html_url']
   		}
   		)
   </script>
