@@ -36,7 +36,7 @@
   		.then(function(data){
   			console.log(data)
 		let repositoryInfo = data['public_repos']
-		let repoInfos = 'I have only $(repositoryInfo) in Github.'
+		let repoInfos = 'I have only ${repositoryInfo} in Github.'
 		document.getElementById("repoInfo").textContent = repoInfos
 		document.getElementById("githublink").href = data['html_url']
   		}
