@@ -7,6 +7,11 @@
 	<meta name="description" content="Web Development Enthusiast">
 	
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		.main{
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
 <div class="box">
@@ -22,25 +27,35 @@
   </div>
   
   <div class="mainbody">
-	  <h4 id="repoInfo"></h4>
-	  <h4>Follow me on <a id="githublink">Github</a></h4>
-	
-  
-  
+	 	<div id="loading">
+		loading....
+	</div>
+	<div class="main" id="mainContainer">
+		<img src="MyPic.jpg" height="300" width="150">
+		<h2 id="fullName"></h2>
+		<P id="belief"></P>
+		<h4 id="repoInfo"></h4>
+		<p>
+			Do visit my <a id="githublink">Github</a>.
+		</p>
+		<a href="https://twitter.com/Inspirondon?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-lang="en" data-show-count="false">Follow @Inspirondon</a>
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+	<script type="text/javascript">
+		fetch("https://api.github.com/users/Saru-Manandhar")
+			.then(response => response.json())
+			.then(function(data){
+				console.log(data)
 
-</div>
-  <div class="footer">Copyright &copy; 2020 Saru Manandhar. All Rights Reserved. </div>
-  <script>
-  	fetch("https://api.github.com/users/Saru-Manandhar")
-  	.then(response => response.json())
-  		.then(function(data){
-  			console.log(data)
-		let repositoryInfo = data['public_repos']
-		let repoInfos = 'I have only ${repositoryInfo} in Github.'
-		document.getElementById("repoInfo").textContent = repoInfos
-		document.getElementById("githublink").href = data['html_url']
-  		}
-  		)
-  </script>
+				let repositoryInfo = data['public_repos']
+				let repoInfos = 'I have only ${repositoryInfo} in Github.'
+				document.getElementById("fullName").textContent = data['name']
+				document.getElementById("belief").textContent = data['bio']
+				document.getElementById("repoInfo").textContent = repoInfos
+				document.getElementById("githublink").href = data['html_url']
+				document.getElementById("mainContainer").hidden = false
+				document.getElementById("loading").hidden = true
+			})
+	</script>
 </body>
 </html>
